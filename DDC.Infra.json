@@ -1,0 +1,773 @@
+{
+  "options": [
+    {
+      "enabled": false,
+      "definition": {
+        "id": "5d58cc01-7c75-450c-be18-a388ddb129ec"
+      },
+      "inputs": {
+        "branchFilters": "[\"+refs/heads/*\"]",
+        "additionalFields": "{}"
+      }
+    },
+    {
+      "enabled": false,
+      "definition": {
+        "id": "a9db38f9-9fdc-478c-b0f9-464221e58316"
+      },
+      "inputs": {
+        "workItemType": "Bug",
+        "assignToRequestor": "true",
+        "additionalFields": "{}"
+      }
+    }
+  ],
+  "variables": {
+    "system.debug": {
+      "value": "false",
+      "allowOverride": true
+    }
+  },
+  "variableGroups": [
+    {
+      "variables": {
+        "AADAppClientID": {
+          "value": "68b75542-7ad2-4e4e-9304-341eb1a86a03"
+        },
+        "AADAppTenantID": {
+          "value": "adb48caa-0b14-4256-b178-a5e508c807f5"
+        },
+        "BlobLinkedServiceNameDDC": {
+          "value": "BlobLinkedServiceDDC"
+        },
+        "DataSource": {
+          "value": "Enterprise"
+        },
+        "DDCBulkLoadName": {
+          "value": "DDCBulkLoad"
+        },
+        "DDCIncrementalLoadName": {
+          "value": "DDCIncrementalLoad"
+        },
+        "DDCIncrementalPipelineName": {
+          "value": "DDCPipelineIncrementalLoad"
+        },
+        "DDCPipelineName": {
+          "value": "DDCPipeline"
+        },
+        "EmailAddress": {
+          "value": "ashok.singh@eptura.com"
+        },
+        "EnableSnykCodeBaseScan": {
+          "value": "true"
+        },
+        "EnterpriseSourceDataSet": {
+          "value": "EnterpriseSourceDataset"
+        },
+        "IngestionNotebookDDC": {
+          "value": "DDCDataIngestionNotebook"
+        },
+        "IngestionNotebookIncrementalLoadDDC": {
+          "value": "DDCIngestionNotebookIncrementalLoad"
+        },
+        "KeyVaultLinkedServiceName": {
+          "value": "keyvault"
+        },
+        "Location": {
+          "value": "'West US'"
+        },
+        "LookupDataSetDDC": {
+          "value": "DDCLookupDataSet"
+        },
+        "MaxWaterMarkLinkedServiceNameDDC": {
+          "value": "DDCMaxWaterMarkLinkedService"
+        },
+        "MetaDataLinkedServiceNameDDC": {
+          "value": "DDCMetaDataLinkedService"
+        },
+        "MultipleserverName": {
+          "value": "\"stagingenvi,prodtest\""
+        },
+        "ParquetSinkDataSetBulk": {
+          "value": "ParquetSinkDataSetBulk"
+        },
+        "ParquetSinkDataSetIncremental": {
+          "value": "ParquetSinkDataSetIncremental"
+        },
+        "Password": {
+          "value": null,
+          "isSecret": true
+        },
+        "ProductionLinkedServiceName": {
+          "value": "ProductionLinkedService"
+        },
+        "ResourceGroupName": {
+          "value": "DDCDevTeam"
+        },
+        "SourceDataSet": {
+          "value": "SourceDataSet"
+        },
+        "SparkPoolName": {
+          "value": "MediumSparkPool"
+        },
+        "TagdatabaseValue": {
+          "value": "Sqldatabase"
+        },
+        "TagKeyvaultValue": {
+          "value": "Keyvault"
+        },
+        "TagLogicAppValue": {
+          "value": "LogicApp"
+        },
+        "TagName": {
+          "value": "DataTeam"
+        },
+        "TagResourceGroupValue": {
+          "value": "ResourceGroup"
+        },
+        "TagServerValue": {
+          "value": "SqlServer"
+        },
+        "TagSparkpoolValue": {
+          "value": "SparkPool"
+        },
+        "TagSQLServerValue": {
+          "value": "SQLServerDestination"
+        },
+        "TagStorageAccValue": {
+          "value": "StorageAccount"
+        },
+        "TagSynapseValue": {
+          "value": "SynapseWorkspace"
+        },
+        "TimestampDestinationDatasetNameDDC": {
+          "value": "DDCTimestampMetadataDataset"
+        },
+        "TimestampSourceDatasetNameDDC": {
+          "value": "DDCTimestampSourceDataset"
+        },
+        "Username": {
+          "value": "condecodev"
+        },
+        "WaterMarkDatasetDDC": {
+          "value": "DDCWaterMarkDataset"
+        },
+        "WatermarkPipelineNameDDC": {
+          "value": "DDCWatermarkPipeline"
+        },
+        "SQLServerName": {
+          "value": "DevTeam"
+        }
+      },
+      "type": "Vsts",
+      "name": "DDC.VariableGroup",
+      "description": "",
+      "id": 1727
+    }
+  ],
+  "properties": {},
+  "tags": [],
+  "_links": {
+    "self": {
+      "href": "https://condecosoftware.visualstudio.com/21f8b0b0-a325-44f0-9b6d-40af8ca331b5/_apis/build/Definitions/4852?revision=3"
+    },
+    "web": {
+      "href": "https://condecosoftware.visualstudio.com/21f8b0b0-a325-44f0-9b6d-40af8ca331b5/_build/definition?definitionId=4852"
+    },
+    "editor": {
+      "href": "https://condecosoftware.visualstudio.com/21f8b0b0-a325-44f0-9b6d-40af8ca331b5/_build/designer?id=4852&_a=edit-build-definition"
+    },
+    "badge": {
+      "href": "https://condecosoftware.visualstudio.com/21f8b0b0-a325-44f0-9b6d-40af8ca331b5/_apis/build/status/4852"
+    }
+  },
+  "jobAuthorizationScope": 1,
+  "jobTimeoutInMinutes": 60,
+  "jobCancelTimeoutInMinutes": 5,
+  "process": {
+    "phases": [
+      {
+        "steps": [
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Step 1: - Create Resource Group",
+            "timeoutInMinutes": 0,
+            "retryCountOnTaskFailure": 0,
+            "condition": "succeeded()",
+            "task": {
+              "id": "72a1931b-effb-4d2e-8fd8-f8472a07cb62",
+              "versionSpec": "5.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "ConnectedServiceNameARM": "63af4faf-ba4f-4566-81af-ddd0173443d7",
+              "ScriptType": "FilePath",
+              "ScriptPath": "Deployment/Scripts/DDCPowershell/DDCCreateResourceGroup.ps1",
+              "Inline": "# You can write your azure powershell scripts inline here. \n# You can also pass predefined and custom variables to this script using arguments",
+              "ScriptArguments": "-ResourceGroupName $(ResourceGroupName) -Location $(Location) -TagName $(TagName) -TagResourceGroupValue $(TagResourceGroupValue)",
+              "errorActionPreference": "stop",
+              "FailOnStandardError": "false",
+              "TargetAzurePs": "LatestVersion",
+              "CustomTargetAzurePs": "",
+              "pwsh": "false",
+              "validateScriptSignature": "false",
+              "workingDirectory": ""
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Step 2: - Create Storage Account",
+            "timeoutInMinutes": 0,
+            "retryCountOnTaskFailure": 0,
+            "condition": "succeeded()",
+            "task": {
+              "id": "72a1931b-effb-4d2e-8fd8-f8472a07cb62",
+              "versionSpec": "5.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "ConnectedServiceNameARM": "63af4faf-ba4f-4566-81af-ddd0173443d7",
+              "ScriptType": "FilePath",
+              "ScriptPath": "Deployment/Scripts/DDCPowershell/DDCCreateStorage.ps1",
+              "Inline": "# You can write your azure powershell scripts inline here. \n# You can also pass predefined and custom variables to this script using arguments",
+              "ScriptArguments": "-ResourceGroupName $(ResourceGroupName) -Location $(Location) -DataLakeStorageName storage$(ResourceGroupName) -DataLakeStorageContainer storagecontainer$(ResourceGroupName) -TagName $(TagName) -TagStorageAccValue $(TagStorageAccValue)",
+              "errorActionPreference": "stop",
+              "FailOnStandardError": "false",
+              "TargetAzurePs": "LatestVersion",
+              "CustomTargetAzurePs": "",
+              "pwsh": "false",
+              "validateScriptSignature": "false",
+              "workingDirectory": ""
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Step 3: - Create Synapse Workspace",
+            "timeoutInMinutes": 0,
+            "retryCountOnTaskFailure": 0,
+            "condition": "succeeded()",
+            "task": {
+              "id": "72a1931b-effb-4d2e-8fd8-f8472a07cb62",
+              "versionSpec": "5.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "ConnectedServiceNameARM": "63af4faf-ba4f-4566-81af-ddd0173443d7",
+              "ScriptType": "FilePath",
+              "ScriptPath": "Deployment/Scripts/DDCPowershell/DDCCreateSynapseWorkspace.ps1",
+              "Inline": "# You can write your azure powershell scripts inline here. \n# You can also pass predefined and custom variables to this script using arguments",
+              "ScriptArguments": "-ResourceGroupName $(ResourceGroupName) -Location $(Location) -Password $(Password) -UserName $(Username) -DefaultDataLakeStorageAccountName storage$(ResourceGroupName) -DefaultDataLakeStorageFilesystem storagecontainer$(ResourceGroupName) -SynapseName synapse$(ResourceGroupName) -TagName $(TagName) -TagSynapseValue $(TagSynapseValue)",
+              "errorActionPreference": "stop",
+              "FailOnStandardError": "false",
+              "TargetAzurePs": "LatestVersion",
+              "CustomTargetAzurePs": "",
+              "pwsh": "false",
+              "validateScriptSignature": "false",
+              "workingDirectory": ""
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Step 4: - Create Key Vault",
+            "timeoutInMinutes": 0,
+            "retryCountOnTaskFailure": 0,
+            "condition": "succeeded()",
+            "task": {
+              "id": "72a1931b-effb-4d2e-8fd8-f8472a07cb62",
+              "versionSpec": "5.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "ConnectedServiceNameARM": "63af4faf-ba4f-4566-81af-ddd0173443d7",
+              "ScriptType": "FilePath",
+              "ScriptPath": "Deployment/Scripts/DDCPowershell/DDCCreateKeyVault.ps1",
+              "Inline": "# You can write your azure powershell scripts inline here. \n# You can also pass predefined and custom variables to this script using arguments",
+              "ScriptArguments": "-ResourceGroupName $(ResourceGroupName) -Location $(Location) -KeyVaultName keyvault$(ResourceGroupName) -TagName $(TagName) -TagKeyvaultValue $(TagKeyvaultValue)",
+              "errorActionPreference": "stop",
+              "FailOnStandardError": "false",
+              "TargetAzurePs": "LatestVersion",
+              "CustomTargetAzurePs": "",
+              "pwsh": "false",
+              "validateScriptSignature": "false",
+              "workingDirectory": ""
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Step 5: - Create Database",
+            "timeoutInMinutes": 0,
+            "retryCountOnTaskFailure": 0,
+            "condition": "succeeded()",
+            "task": {
+              "id": "72a1931b-effb-4d2e-8fd8-f8472a07cb62",
+              "versionSpec": "5.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "ConnectedServiceNameARM": "63af4faf-ba4f-4566-81af-ddd0173443d7",
+              "ScriptType": "FilePath",
+              "ScriptPath": "Deployment/Scripts/DDCPowershell/DDCCreateDatabase.ps1",
+              "Inline": "# You can write your azure powershell scripts inline here. \n# You can also pass predefined and custom variables to this script using arguments",
+              "ScriptArguments": "-ResourceGroupName $(ResourceGroupName) -Location $(Location) -UserName $(Username) -Password $(Password) -DatabaseName database$(ResourceGroupName) -ServerName server$(ResourceGroupName) -TagName $(TagName) -TagServerValue $(TagServerValue) -TagdatabaseValue $(TagdatabaseValue)",
+              "errorActionPreference": "stop",
+              "FailOnStandardError": "false",
+              "TargetAzurePs": "LatestVersion",
+              "CustomTargetAzurePs": "",
+              "pwsh": "false",
+              "validateScriptSignature": "false",
+              "workingDirectory": ""
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Step 6: - Create SqlServer",
+            "timeoutInMinutes": 0,
+            "retryCountOnTaskFailure": 0,
+            "condition": "succeeded()",
+            "task": {
+              "id": "72a1931b-effb-4d2e-8fd8-f8472a07cb62",
+              "versionSpec": "5.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "ConnectedServiceNameARM": "63af4faf-ba4f-4566-81af-ddd0173443d7",
+              "ScriptType": "FilePath",
+              "ScriptPath": "Deployment/Scripts/DDCPowershell/DDCCreateSqlServer.ps1",
+              "Inline": "# You can write your azure powershell scripts inline here. \n# You can also pass predefined and custom variables to this script using arguments",
+              "ScriptArguments": "-ResourceGroupName $(ResourceGroupName) -Location $(Location) -UserName $(Username) -Password $(Password) -SQLServerName $(SQLServerName) -TagName $(TagName) -TagSQLServerValue $(TagSQLServerValue)",
+              "errorActionPreference": "stop",
+              "FailOnStandardError": "false",
+              "TargetAzurePs": "LatestVersion",
+              "CustomTargetAzurePs": "",
+              "pwsh": "false",
+              "validateScriptSignature": "false",
+              "workingDirectory": ""
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Step 7: - Set Firewall Rule ",
+            "timeoutInMinutes": 0,
+            "retryCountOnTaskFailure": 0,
+            "condition": "succeeded()",
+            "task": {
+              "id": "ce85a08b-a538-4d2b-8589-1d37a9ab970f",
+              "versionSpec": "1.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "ConnectedServiceNameSelector": "ConnectedServiceNameARM",
+              "ConnectedServiceName": "",
+              "ConnectedServiceNameARM": "63af4faf-ba4f-4566-81af-ddd0173443d7",
+              "AuthenticationType": "server",
+              "ServerName": "server$(ResourceGroupName).database.windows.net",
+              "DatabaseName": "master",
+              "SqlUsername": "$(Username)",
+              "SqlPassword": "$(Password)",
+              "aadSqlUsername": "",
+              "aadSqlPassword": "",
+              "ConnectionString": "",
+              "TaskNameSelector": "InlineSqlTask",
+              "DeploymentAction": "Publish",
+              "DacpacFile": "",
+              "BacpacFile": "",
+              "SqlFile": "",
+              "SqlInline": "exec sp_set_firewall_rule N'AllowAzure', '0.0.0.0', '255.255.255.255';",
+              "PublishProfile": "",
+              "AdditionalArguments": "",
+              "SqlAdditionalArguments": "",
+              "InlineAdditionalArguments": "",
+              "IpDetectionMethod": "AutoDetect",
+              "StartIpAddress": "",
+              "EndIpAddress": "",
+              "DeleteFirewallRule": "true"
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Step 8: - Create SPs",
+            "timeoutInMinutes": 0,
+            "retryCountOnTaskFailure": 0,
+            "condition": "succeeded()",
+            "task": {
+              "id": "ce85a08b-a538-4d2b-8589-1d37a9ab970f",
+              "versionSpec": "1.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "ConnectedServiceNameSelector": "ConnectedServiceNameARM",
+              "ConnectedServiceName": "",
+              "ConnectedServiceNameARM": "63af4faf-ba4f-4566-81af-ddd0173443d7",
+              "AuthenticationType": "server",
+              "ServerName": "server$(ResourceGroupName).database.windows.net",
+              "DatabaseName": "database$(ResourceGroupName)",
+              "SqlUsername": "$(Username)",
+              "SqlPassword": "$(Password)",
+              "aadSqlUsername": "",
+              "aadSqlPassword": "",
+              "ConnectionString": "",
+              "TaskNameSelector": "SqlTask",
+              "DeploymentAction": "Publish",
+              "DacpacFile": "",
+              "BacpacFile": "",
+              "SqlFile": "src/DDCSql/DDCCombined_Sql_Scripts_for_USPs.sql",
+              "SqlInline": "",
+              "PublishProfile": "",
+              "AdditionalArguments": "",
+              "SqlAdditionalArguments": "",
+              "InlineAdditionalArguments": "",
+              "IpDetectionMethod": "AutoDetect",
+              "StartIpAddress": "",
+              "EndIpAddress": "",
+              "DeleteFirewallRule": "true"
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Step 9: - Create Metadata Tables",
+            "timeoutInMinutes": 0,
+            "retryCountOnTaskFailure": 0,
+            "condition": "succeeded()",
+            "task": {
+              "id": "ce85a08b-a538-4d2b-8589-1d37a9ab970f",
+              "versionSpec": "1.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "ConnectedServiceNameSelector": "ConnectedServiceNameARM",
+              "ConnectedServiceName": "",
+              "ConnectedServiceNameARM": "63af4faf-ba4f-4566-81af-ddd0173443d7",
+              "AuthenticationType": "server",
+              "ServerName": "server$(ResourceGroupName).database.windows.net",
+              "DatabaseName": "database$(ResourceGroupName)",
+              "SqlUsername": "$(Username)",
+              "SqlPassword": "$(Password)",
+              "aadSqlUsername": "",
+              "aadSqlPassword": "",
+              "ConnectionString": "",
+              "TaskNameSelector": "SqlTask",
+              "DeploymentAction": "Publish",
+              "DacpacFile": "",
+              "BacpacFile": "",
+              "SqlFile": "src/DDCSql/DDCCombined_Sql_Scripts_for_Tables.sql",
+              "SqlInline": "",
+              "PublishProfile": "",
+              "AdditionalArguments": "",
+              "SqlAdditionalArguments": "",
+              "InlineAdditionalArguments": "",
+              "IpDetectionMethod": "AutoDetect",
+              "StartIpAddress": "",
+              "EndIpAddress": "",
+              "DeleteFirewallRule": "true"
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Step 10: - Remove Firewall Rule",
+            "timeoutInMinutes": 0,
+            "retryCountOnTaskFailure": 0,
+            "condition": "succeeded()",
+            "task": {
+              "id": "ce85a08b-a538-4d2b-8589-1d37a9ab970f",
+              "versionSpec": "1.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "ConnectedServiceNameSelector": "ConnectedServiceNameARM",
+              "ConnectedServiceName": "",
+              "ConnectedServiceNameARM": "63af4faf-ba4f-4566-81af-ddd0173443d7",
+              "AuthenticationType": "server",
+              "ServerName": "server$(ResourceGroupName).database.windows.net",
+              "DatabaseName": "master",
+              "SqlUsername": "$(Username)",
+              "SqlPassword": "$(Password)",
+              "aadSqlUsername": "",
+              "aadSqlPassword": "",
+              "ConnectionString": "",
+              "TaskNameSelector": "InlineSqlTask",
+              "DeploymentAction": "Publish",
+              "DacpacFile": "",
+              "BacpacFile": "",
+              "SqlFile": "",
+              "SqlInline": "EXEC sp_delete_firewall_rule N'AllowAzure';",
+              "PublishProfile": "",
+              "AdditionalArguments": "",
+              "SqlAdditionalArguments": "",
+              "InlineAdditionalArguments": "",
+              "IpDetectionMethod": "AutoDetect",
+              "StartIpAddress": "",
+              "EndIpAddress": "",
+              "DeleteFirewallRule": "true"
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Step 11: - Deploy Logic App",
+            "timeoutInMinutes": 0,
+            "retryCountOnTaskFailure": 0,
+            "condition": "succeeded()",
+            "task": {
+              "id": "72a1931b-effb-4d2e-8fd8-f8472a07cb62",
+              "versionSpec": "5.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "ConnectedServiceNameARM": "63af4faf-ba4f-4566-81af-ddd0173443d7",
+              "ScriptType": "FilePath",
+              "ScriptPath": "Deployment/Scripts/DDCPowershell/DDCCreateLogicApp.ps1",
+              "Inline": "# You can write your azure powershell scripts inline here. \n# You can also pass predefined and custom variables to this script using arguments",
+              "ScriptArguments": "-Office365ExternalID /subscriptions/b373690d-79d2-4528-9e24-846f3708777a/resourceGroups/MailService/providers/Microsoft.Web/connections/office365 -Office365ID /subscriptions/b373690d-79d2-4528-9e24-846f3708777a/providers/Microsoft.Web/locations/westus/managedApis/office365 -TemplateJSONSuccessPath Deployment/ARM/logicapp/LogicAppSuccessDeployment.json -ResourceGroupName $(ResourceGroupName) -TemplateJSONFailurePath Deployment/ARM/logicapp/LogicAppFailureDeployment.json -TagName $(TagName) -TagLogicAppValue $(TagLogicAppValue) -Location $(Location)",
+              "errorActionPreference": "stop",
+              "FailOnStandardError": "false",
+              "TargetAzurePs": "LatestVersion",
+              "CustomTargetAzurePs": "",
+              "pwsh": "false",
+              "validateScriptSignature": "false",
+              "workingDirectory": ""
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Step 12: - Create Version Table",
+            "timeoutInMinutes": 0,
+            "retryCountOnTaskFailure": 0,
+            "condition": "succeeded()",
+            "task": {
+              "id": "72a1931b-effb-4d2e-8fd8-f8472a07cb62",
+              "versionSpec": "5.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "ConnectedServiceNameARM": "63af4faf-ba4f-4566-81af-ddd0173443d7",
+              "ScriptType": "FilePath",
+              "ScriptPath": "Deployment/Scripts/DDCPowershell/DDCCreateVersionTable.ps1",
+              "Inline": "# You can write your azure powershell scripts inline here. \n# You can also pass predefined and custom variables to this script using arguments",
+              "ScriptArguments": "-ResourceGroupName $(ResourceGroupName) -DataLakeStorageName storage$(ResourceGroupName)",
+              "errorActionPreference": "stop",
+              "FailOnStandardError": "false",
+              "TargetAzurePs": "LatestVersion",
+              "CustomTargetAzurePs": "",
+              "pwsh": "false",
+              "validateScriptSignature": "false",
+              "workingDirectory": ""
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Step 13: - Update Version Table",
+            "timeoutInMinutes": 0,
+            "retryCountOnTaskFailure": 0,
+            "condition": "succeeded()",
+            "task": {
+              "id": "72a1931b-effb-4d2e-8fd8-f8472a07cb62",
+              "versionSpec": "5.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "ConnectedServiceNameARM": "63af4faf-ba4f-4566-81af-ddd0173443d7",
+              "ScriptType": "FilePath",
+              "ScriptPath": "Deployment/Scripts/DDCPowershell/DDCUpdateVersionTable.ps1",
+              "Inline": "# You can write your azure powershell scripts inline here. \n# You can also pass predefined and custom variables to this script using arguments",
+              "ScriptArguments": "-ResourceGroupName $(ResourceGroupName) -DataLakeStorageName storage$(ResourceGroupName)",
+              "errorActionPreference": "stop",
+              "FailOnStandardError": "false",
+              "TargetAzurePs": "LatestVersion",
+              "CustomTargetAzurePs": "",
+              "pwsh": "false",
+              "validateScriptSignature": "false",
+              "workingDirectory": ""
+            }
+          },
+          {
+            "environment": {},
+            "enabled": false,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Step 14: - Snyk Test",
+            "timeoutInMinutes": 0,
+            "retryCountOnTaskFailure": 0,
+            "condition": "succeeded()",
+            "task": {
+              "id": "72a1931b-effb-4d2e-8fd8-f8472a07cb62",
+              "versionSpec": "5.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "ConnectedServiceNameARM": "899c998c-ef68-478b-851a-ba12b9b40dc7",
+              "ScriptType": "FilePath",
+              "ScriptPath": "Deployment/Scripts/Powershell/SnykScanProcessing_1.0.1.ps1",
+              "Inline": "# You can write your azure powershell scripts inline here. \n# You can also pass predefined and custom variables to this script using arguments",
+              "ScriptArguments": "-snykAuthToken $(SnykToken) -orgId $(SnykOrgId) -currentBranch $(Build.SourceBranch) -agentTempPath $(Agent.TempDirectory) -enableCodeBaseScan $(EnableSnykCodeBaseScan) -deployConfigFilePath Deployment\\ARM\\dataset\\AddColumnorTabledy.json,Deployment\\ARM\\dataset\\LookupDataSet.json,Deployment\\ARM\\dataset\\ParquetSinkDataSet.json,Deployment\\ARM\\dataset\\SourceDataSet.json,Deployment\\ARM\\dataset\\TimestampMetadataDataset.json,Deployment\\ARM\\dataset\\TimestampSourceData.json,Deployment\\ARM\\dataset\\WaterMarkDataset.json,Deployment\\ARM\\integrationRuntime\\AutoResolveIntegrationRuntime.json,Deployment\\ARM\\linkedService\\CaptureSecretKey.json,Deployment\\ARM\\linkedService\\FinalOutputBloblakeservice.json,Deployment\\ARM\\linkedService\\MaxWaterMarkLinkedService.json,Deployment\\ARM\\linkedService\\Servers_DBs_LinkedService.json,Deployment\\ARM\\linkedService\\StaticLinkedServ.json,Deployment\\ARM\\logicapp\\LogicAppFailureDeployment.json,Deployment\\ARM\\logicapp\\LogicAppSuccessDeployment.json,Deployment\\ARM\\pipeline\\CondecoGalaxyFullLoad.json,Deployment\\ARM\\pipeline\\NewTableOrColumns_AddColumns.json,Deployment\\ARM\\pipeline\\NewTableOrColumns_AddTable.json,Deployment\\ARM\\pipeline\\PLMigrateHotaDatatoColdData.json,Deployment\\ARM\\pipeline\\SubPipelineFullLoad.json -SnykExecution $(SnykExecution)",
+              "errorActionPreference": "stop",
+              "FailOnStandardError": "false",
+              "TargetAzurePs": "LatestVersion",
+              "CustomTargetAzurePs": "",
+              "pwsh": "false",
+              "validateScriptSignature": "false",
+              "workingDirectory": ""
+            }
+          }
+        ],
+        "name": "Agent job 1",
+        "refName": "Job_1",
+        "condition": "succeeded()",
+        "target": {
+          "queue": {
+            "_links": {
+              "self": {
+                "href": "https://condecosoftware.visualstudio.com/_apis/build/Queues/166"
+              }
+            },
+            "id": 166,
+            "url": "https://condecosoftware.visualstudio.com/_apis/build/Queues/166",
+            "pool": null
+          },
+          "agentSpecification": {
+            "identifier": "windows-latest"
+          },
+          "executionOptions": {
+            "type": 0
+          },
+          "allowScriptsAuthAccessOption": false,
+          "type": 1
+        },
+        "jobAuthorizationScope": 1
+      }
+    ],
+    "target": {
+      "agentSpecification": {
+        "identifier": "windows-latest"
+      }
+    },
+    "type": 1
+  },
+  "repository": {
+    "properties": {
+      "apiUrl": "https://api.github.com/repos/CondecoByEptura/ED.Direct.Data.Connectivity",
+      "branchesUrl": "https://api.github.com/repos/CondecoByEptura/ED.Direct.Data.Connectivity/branches",
+      "cloneUrl": "https://github.com/CondecoByEptura/ED.Direct.Data.Connectivity.git",
+      "connectedServiceId": "3a107ef4-7e70-45c9-b762-90abf863a682",
+      "defaultBranch": "main",
+      "fullName": "CondecoByEptura/ED.Direct.Data.Connectivity",
+      "hasAdminPermissions": "True",
+      "isFork": "False",
+      "isPrivate": "True",
+      "lastUpdated": "04/19/2024 06:48:56",
+      "manageUrl": "https://github.com/CondecoByEptura/ED.Direct.Data.Connectivity",
+      "nodeId": "R_kgDOLwRO2Q",
+      "ownerId": "147040572",
+      "orgName": "CondecoByEptura",
+      "refsUrl": "https://api.github.com/repos/CondecoByEptura/ED.Direct.Data.Connectivity/git/refs",
+      "safeRepository": "CondecoByEptura/ED.Direct.Data.Connectivity",
+      "shortName": "ED.Direct.Data.Connectivity",
+      "ownerAvatarUrl": "https://avatars.githubusercontent.com/u/147040572?v=4",
+      "archived": "False",
+      "externalId": "788811481",
+      "ownerIsAUser": "False",
+      "checkoutNestedSubmodules": "false",
+      "cleanOptions": "0",
+      "fetchDepth": "0",
+      "gitLfsSupport": "false",
+      "reportBuildStatus": "true",
+      "skipSyncSource": "false",
+      "fetchTags": "false",
+      "labelSourcesFormat": "$(build.buildNumber)",
+      "labelSources": "0"
+    },
+    "id": "CondecoByEptura/ED.Direct.Data.Connectivity",
+    "type": "GitHub",
+    "name": "CondecoByEptura/ED.Direct.Data.Connectivity",
+    "url": "https://github.com/CondecoByEptura/ED.Direct.Data.Connectivity.git",
+    "defaultBranch": "refs/heads/development_ashok",
+    "clean": "true",
+    "checkoutSubmodules": false
+  },
+  "processParameters": {},
+  "quality": 1,
+  "authoredBy": {
+    "displayName": "Ashok Singh",
+    "url": "https://spsprodweu3.vssps.visualstudio.com/A3e42757e-c7d8-4b2b-b603-ee414eb0f5b1/_apis/Identities/4b92505f-1fec-6573-a7db-3fb149ce368f",
+    "_links": {
+      "avatar": {
+        "href": "https://condecosoftware.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.NGI5MjUwNWYtMWZlYy03NTczLWE3ZGItM2ZiMTQ5Y2UzNjhm"
+      }
+    },
+    "id": "4b92505f-1fec-6573-a7db-3fb149ce368f",
+    "uniqueName": "Ashok.Singh@condecosoftware.com",
+    "imageUrl": "https://condecosoftware.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.NGI5MjUwNWYtMWZlYy03NTczLWE3ZGItM2ZiMTQ5Y2UzNjhm",
+    "descriptor": "aad.NGI5MjUwNWYtMWZlYy03NTczLWE3ZGItM2ZiMTQ5Y2UzNjhm"
+  },
+  "drafts": [],
+  "queue": {
+    "_links": {
+      "self": {
+        "href": "https://condecosoftware.visualstudio.com/_apis/build/Queues/166"
+      }
+    },
+    "id": 166,
+    "name": "Azure Pipelines",
+    "url": "https://condecosoftware.visualstudio.com/_apis/build/Queues/166",
+    "pool": {
+      "id": 25,
+      "name": "Azure Pipelines",
+      "isHosted": true
+    }
+  },
+  "id": 4852,
+  "name": "DDC.Infra-import",
+  "url": "https://condecosoftware.visualstudio.com/21f8b0b0-a325-44f0-9b6d-40af8ca331b5/_apis/build/Definitions/4852?revision=3",
+  "uri": "vstfs:///Build/Definition/4852",
+  "path": "\\Ashok\\DDC\\Git",
+  "type": 2,
+  "queueStatus": 0,
+  "revision": 3,
+  "createdDate": "2024-05-24T18:58:14.783Z",
+  "project": {
+    "id": "21f8b0b0-a325-44f0-9b6d-40af8ca331b5",
+    "name": "Eng Data",
+    "url": "https://condecosoftware.visualstudio.com/_apis/projects/21f8b0b0-a325-44f0-9b6d-40af8ca331b5",
+    "state": 1,
+    "revision": 80,
+    "visibility": 0,
+    "lastUpdateTime": "2021-07-08T07:45:01.793Z"
+  }
+}
